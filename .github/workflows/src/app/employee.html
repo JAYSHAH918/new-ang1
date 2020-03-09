@@ -1,0 +1,129 @@
+
+<div class="container-fluid">
+  <h1>Employee details form</h1>
+  <form #userForm="ngForm"  novalidate>
+
+
+
+
+
+      <div class="form-group" >
+        <label>First Name:</label>
+        <input type="text" class="form-control" name="FirstName" ngModel/>
+      </div>
+      <div class="form-group" >
+        <label>Last Name:</label>
+        <input type="text" class="form-control" name="LastName" ngModel />
+      </div>
+
+      <div class="form-group" >
+        <label>Email:</label>
+        <input type="email" class="form-control" name="Email" ngModel/>
+      </div>
+
+
+      <div class="form-group" >
+        <label>Contact Number:</label>
+        <input type="tel" class="form-control" name="ContactNumber" ngModel/>
+      </div>
+
+
+      <div class="form-group" >
+        <label>User Name:</label>
+        <input type="text" class="form-control" name="UserName" ngModel />
+      </div>
+
+
+      <div class="form-group" >
+        <label>Password:</label>
+        <input type="password" class="form-control" name="Password" ngModel />
+      </div>
+<!--
+      <div class="mb-3">
+        <label>Gender</label>
+        <div class="from-check" name="Gender" ngModel>
+              <input class="form-check-input" type="radio" name="gender" value="male">
+          <label class="form-check-input">Male</label>
+        </div> <br/>
+        <div class="from-check">
+          <input class="form-check-input" type="radio" name="gender" value="female">
+          <label class="form-check-input">Female</label>
+        </div>
+      </div>
+-->
+       <label >Gender:</label> <br />
+        <input type="radio" id="male" name="gender" value="male">
+        <label>Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label>Female</label><br>
+
+        <br />
+
+
+      Qualification<br/>
+      <div class="form-group">
+         <select class="custom-select" name="Qualification" ngModel>                                                                                                                                                                  <option selected>MCA</option> <option selected>BTech</option> <option selected>BCA</option>
+
+           <option *ngFor="let select Qualification">{{quali}}</option>
+         </select>
+
+       </div>
+<!--
+        <label>Qualification</label> <br />
+        <select id="Qualification" name="Qualification">
+
+            <option value="btech">BTech</option>
+            <option value="mcom">MCOM</option>
+            <option value="mca">MCA</option>
+            <option value="others">Others</option>
+        </select>
+        <br />
+
+      -->
+
+
+      Experience <br/>
+       <div class="form-group">
+        <select class="custom-select" name="Experience" ngModel>                                                                                                                                                                                                                                                                                   <option selected>1</option><option selected>2</option><option selected>>2</option>
+
+          <option *ngFor="let select experience">{{exp}}</option>
+        </select>
+
+      </div>
+<!--
+        <label>Experience:</label> <br />
+        <select id="Experience" name="Experience">
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value=">3">>3</option>
+        </select>
+        <br />
+
+        <br />
+      -->
+
+
+
+        <label> Coding Languages:</label> <br />
+        <input type="checkbox" name="c/c++" value="c/c++" />
+        <label>C/C++</label><br />
+        <input type="checkbox" name="java" value="java" />
+        <label>Java</label><br />
+        <input type="checkbox" name="c#" value="c#" />
+        <label>C#</label><br />
+        <input type="checkbox" name="php" value="php" />
+        <label>Php</label><br />
+        <input type="checkbox" name="python" value="python" />
+        <label>Python</label><br />
+
+
+        <br />
+        <button class="btn btn-primary" >Submit</button>
+
+<br/>
+
+
+    </form>
+  </div>
